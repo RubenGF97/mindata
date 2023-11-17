@@ -17,4 +17,10 @@ public class SuperheroeHandler extends ResponseEntityExceptionHandler {
   @ResponseStatus(value = HttpStatus.NO_CONTENT, reason = "Base de datos vacia")
   public void baseDatosVacia(BasedatosvaciaException e) {}
 
+  @ExceptionHandler(value = DuplicadoException.class)
+  @ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "Super Heroe duplicado")
+  public void duplicado(DuplicadoException e) {}
+
+   
+
 }
